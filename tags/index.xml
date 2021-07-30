@@ -2,62 +2,62 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Decisions</title>
-    <link>https://huang-zp.github.io/tags/</link>
+    <link>https://disconnected.site/tags/</link>
     <description>Recent content in Tags on Decisions</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 24 Jan 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://huang-zp.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 24 Jan 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://disconnected.site/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>css</title>
-      <link>https://huang-zp.github.io/tags/css/</link>
+      <link>https://disconnected.site/tags/css/</link>
       <pubDate>Fri, 24 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://huang-zp.github.io/tags/css/</guid>
+      <guid>https://disconnected.site/tags/css/</guid>
       <description></description>
     </item>
     
     <item>
       <title>html</title>
-      <link>https://huang-zp.github.io/tags/html/</link>
+      <link>https://disconnected.site/tags/html/</link>
       <pubDate>Fri, 24 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://huang-zp.github.io/tags/html/</guid>
+      <guid>https://disconnected.site/tags/html/</guid>
       <description></description>
     </item>
     
     <item>
       <title>markdown</title>
-      <link>https://huang-zp.github.io/tags/markdown/</link>
+      <link>https://disconnected.site/tags/markdown/</link>
       <pubDate>Fri, 24 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://huang-zp.github.io/tags/markdown/</guid>
+      <guid>https://disconnected.site/tags/markdown/</guid>
       <description></description>
     </item>
     
     <item>
       <title>themes</title>
-      <link>https://huang-zp.github.io/tags/themes/</link>
+      <link>https://disconnected.site/tags/themes/</link>
       <pubDate>Fri, 24 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://huang-zp.github.io/tags/themes/</guid>
+      <guid>https://disconnected.site/tags/themes/</guid>
       <description></description>
     </item>
     
     <item>
       <title>text</title>
-      <link>https://huang-zp.github.io/tags/text/</link>
+      <link>https://disconnected.site/tags/text/</link>
       <pubDate>Tue, 17 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://huang-zp.github.io/tags/text/</guid>
+      <guid>https://disconnected.site/tags/text/</guid>
       <description></description>
     </item>
     
     <item>
       <title>emoji</title>
-      <link>https://huang-zp.github.io/tags/emoji/</link>
+      <link>https://disconnected.site/tags/emoji/</link>
       <pubDate>Tue, 03 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://huang-zp.github.io/tags/emoji/</guid>
+      <guid>https://disconnected.site/tags/emoji/</guid>
       <description></description>
     </item>
     
