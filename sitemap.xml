@@ -2,10 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://disconnected.site/tags/css/</loc>
-    <lastmod>2020-01-24T00:00:00+00:00</lastmod>
+    <loc>https://disconnected.site/posts/async-await/</loc>
+    <lastmod>2021-11-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://disconnected.site/</loc>
+    <lastmod>2021-11-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://disconnected.site/tags/javascript/</loc>
+    <lastmod>2021-11-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://disconnected.site/posts/</loc>
+    <lastmod>2021-11-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://disconnected.site/posts/promise-one/</loc>
+    <lastmod>2021-11-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://disconnected.site/posts/promise-two/</loc>
+    <lastmod>2021-11-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://disconnected.site/tags/</loc>
+    <lastmod>2021-11-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://disconnected.site/tags/css/</loc>
     <lastmod>2020-01-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://disconnected.site/tags/html/</loc>
@@ -15,12 +33,6 @@
     <lastmod>2020-01-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://disconnected.site/posts/markdown-syntax/</loc>
-    <lastmod>2020-01-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://disconnected.site/posts/</loc>
-    <lastmod>2020-01-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://disconnected.site/tags/</loc>
     <lastmod>2020-01-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://disconnected.site/tags/themes/</loc>
@@ -64,5 +76,7 @@
   </url><url>
     <loc>https://disconnected.site/about/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://disconnected.site/posts/react-knowledge-point/</loc>
   </url>
 </urlset>

@@ -6,7 +6,34 @@
     <description>Recent content on Decisions</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 24 Jan 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://disconnected.site/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 17 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://disconnected.site/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Async Await</title>
+      <link>https://disconnected.site/posts/async-await/</link>
+      <pubDate>Wed, 17 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://disconnected.site/posts/async-await/</guid>
+      <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>promise one</title>
+      <link>https://disconnected.site/posts/promise-one/</link>
+      <pubDate>Wed, 17 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://disconnected.site/posts/promise-one/</guid>
+      <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>promise two</title>
+      <link>https://disconnected.site/posts/promise-two/</link>
+      <pubDate>Wed, 17 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://disconnected.site/posts/promise-two/</guid>
+      <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Markdown Syntax</title>
       <link>https://disconnected.site/posts/markdown-syntax/</link>
@@ -113,6 +140,15 @@
       
       <guid>https://disconnected.site/about/</guid>
       <description>Written in Go, Hugo is an open source static site generator available under the Apache License 2.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://disconnected.site/posts/react-knowledge-point/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://disconnected.site/posts/react-knowledge-point/</guid>
+      <description>author: &amp;ldquo;Hugo Authors&amp;rdquo; title: &amp;ldquo;Emoji Support&amp;rdquo; date: &amp;ldquo;2021-11-17&amp;rdquo; description: &amp;ldquo;promise one&amp;rdquo; tags: [ &amp;ldquo;javascript&amp;rdquo;, ]</description>
     </item>
     
   </channel>

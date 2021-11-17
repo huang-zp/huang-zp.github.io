@@ -2,13 +2,12 @@
 
 <html lang="en-us">
     <head>
-	<meta name="generator" content="Hugo 0.86.0" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no"/>
 
-    <title>Decisions</title>
+    <title>promise two | Decisions</title>
     
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -29,8 +28,6 @@
     
     
  
-    
-    <link rel="alternate" type="application/rss+xml" href="https://disconnected.site/index.xml" title="Decisions" />
     </head>
 
     <body>
@@ -149,142 +146,165 @@
 
         <div id="content" class="content-container">
         
-<div class = "article-content">
-        
-        <div class="description">
-            <p>Hey! It compiles! Ship it!</p>
-        </div>
-        
-        
-        
-        
-        <article>
-            <h2>
-                <a href="https://disconnected.site/posts/placeholder-text/">
-                    Placeholder Text
-                </a>
-            </h2>
-            <div>
-                <p><p>Lorem est tota propiore conpellat pectoribus de pectora summo.</p></p>
-                
-            </div>
-            <div class="post-footer">
-            <time>December 17, 2019</time>
 
-            
-            
-                
-                    <a class="tag" href="/tags/markdown">#markdown</a>
-                
-                    <a class="tag" href="/tags/text">#text</a>
-                
-            
-            </div> 
-           
-        </article>
-        
-        <article>
-            <h2>
-                <a href="https://disconnected.site/posts/emoji-support/">
-                    Emoji Support
-                </a>
-            </h2>
-            <div>
-                <p>Emoji can be enabled in a Hugo project in a number of ways.</p>
-                
-            </div>
-            <div class="post-footer">
-            <time>December 3, 2019</time>
+<h1 class="post-title">promise two</h1>
+    
+    <time>November 17, 2021</time>
+    
+    <div>
+        <p>
+        <p>This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// 链式调用，三次网络请求
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">new</span> Promise((<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span>)=&gt;{
+    <span style="color:#75715e">// setTimeout理解为一次请求
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">setTimeout</span>(()=&gt;{
+        <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;0&#39;</span>
+        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;第一次请求获得结果:&#39;</span>,<span style="color:#a6e22e">data</span>);
+        <span style="color:#75715e">// 成功后
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">resolve</span>(<span style="color:#a6e22e">data</span>)
+        <span style="color:#75715e">// 失败后
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">// reject(&#39;err&#39;)
+</span><span style="color:#75715e"></span>    }, <span style="color:#ae81ff">3000</span>)
+}).<span style="color:#a6e22e">then</span>((<span style="color:#a6e22e">data</span>)=&gt;{
+    <span style="color:#75715e">// 将数据处理一下，以用于第二次请求
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">data</span> <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#39;1&#39;</span>
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Promise((<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span>) =&gt; {
+        <span style="color:#a6e22e">setTimeout</span>(()=&gt;{
+            <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;第二次请求获得结果:&#39;</span>,<span style="color:#a6e22e">data</span>);
+            <span style="color:#75715e">// 成功后
+</span><span style="color:#75715e"></span>            <span style="color:#a6e22e">resolve</span>(<span style="color:#a6e22e">data</span>)
+            <span style="color:#75715e">// 失败后
+</span><span style="color:#75715e"></span>            <span style="color:#75715e">// reject(&#39;err&#39;)
+</span><span style="color:#75715e"></span>        }, <span style="color:#ae81ff">3000</span>)
+    })
+}).<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">data</span>=&gt;{
+    <span style="color:#75715e">// 将第二次请求得到的数据处理一下，以用于第三次请求
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">data</span> <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#39;2&#39;</span>
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Promise((<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span>) =&gt; {
+        <span style="color:#a6e22e">setTimeout</span>(()=&gt;{
+            <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;第三次请求获得结果:&#39;</span>,<span style="color:#a6e22e">data</span>);
+            <span style="color:#75715e">// 成功后
+</span><span style="color:#75715e"></span>            <span style="color:#a6e22e">resolve</span>(<span style="color:#a6e22e">data</span>)
+            <span style="color:#75715e">// 失败后
+</span><span style="color:#75715e"></span>            <span style="color:#75715e">// reject(&#39;err&#39;)
+</span><span style="color:#75715e"></span>        }, <span style="color:#ae81ff">3000</span>)
+    })
+}).<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">data</span>=&gt;{
+    <span style="color:#75715e">// 处理第三次请求的结果
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">data</span> <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#39;3&#39;</span>
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">data</span>);
+    <span style="color:#75715e">// 完成
+</span><span style="color:#75715e"></span>}).<span style="color:#66d9ef">catch</span>(<span style="color:#a6e22e">err</span>=&gt;{
+    <span style="color:#75715e">// 中间有一次reject，都会直接到这里
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// 或者抛出错误，throw &#34;&#34;
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">err</span>)
+})
 
-            
-            
-                
-                    <a class="tag" href="/tags/emoji">#emoji</a>
-                
-            
-            </div> 
-           
-        </article>
-        
-        <article>
-            <h2>
-                <a href="https://disconnected.site/posts/emoji-support1/">
-                    Emoji Support
-                </a>
-            </h2>
-            <div>
-                <p>Emoji can be enabled in a Hugo project in a number of ways.</p>
-                
-            </div>
-            <div class="post-footer">
-            <time>December 3, 2019</time>
 
-            
-            
-                
-                    <a class="tag" href="/tags/emoji">#emoji</a>
-                
-            
-            </div> 
-           
-        </article>
-        
-        <article>
-            <h2>
-                <a href="https://disconnected.site/posts/emoji-support2/">
-                    Emoji Support
-                </a>
-            </h2>
-            <div>
-                <p>Emoji can be enabled in a Hugo project in a number of ways.</p>
-                
-            </div>
-            <div class="post-footer">
-            <time>December 3, 2019</time>
 
-            
-            
-                
-                    <a class="tag" href="/tags/emoji">#emoji</a>
-                
-            
-            </div> 
-           
-        </article>
-        
+<span style="color:#75715e">// 也是一步一步处理，但是每一步处理中没有异步操作【第一种写法】
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">new</span> Promise((<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span>)=&gt;{
+    <span style="color:#a6e22e">setTimeout</span>(()=&gt;{
+        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;获得结果:0&#39;</span>);
+        <span style="color:#a6e22e">resolve</span>(<span style="color:#e6db74">&#39;0&#39;</span>)
+    }, <span style="color:#ae81ff">1000</span>)
+}).<span style="color:#a6e22e">then</span>((<span style="color:#a6e22e">data</span>)=&gt;{
+    <span style="color:#75715e">// 第一次处理数据
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">data</span> <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#39;1&#39;</span>
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">data</span>)
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Promise(<span style="color:#a6e22e">resolve</span> =&gt; {
+        <span style="color:#75715e">// 没有异步操作，理解为进行下一步处理
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">resolve</span>(<span style="color:#a6e22e">data</span>)
+    })
+}).<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">data</span>=&gt;{
+    <span style="color:#75715e">// 第二次处理数据
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">data</span> <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#39;2&#39;</span>
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">data</span>)
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Promise(<span style="color:#a6e22e">resolve</span> =&gt; {
+        <span style="color:#75715e">// 没有异步操作，理解为再进行下一步操作
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">resolve</span>(<span style="color:#a6e22e">data</span>)
+    })
+}).<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">data</span>=&gt;{
+    <span style="color:#75715e">// 第三次处理数据
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">data</span> <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#39;3&#39;</span>
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">data</span>);
+    <span style="color:#75715e">// 处理完成
+</span><span style="color:#75715e"></span>})
+
+
+
+
+<span style="color:#75715e">// 也是一步一步处理，但是每一步处理中没有异步操作【第二种写法】
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">new</span> Promise((<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span>)=&gt;{
+    <span style="color:#a6e22e">setTimeout</span>(()=&gt;{
+        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;获得结果:0&#39;</span>);
+        <span style="color:#a6e22e">resolve</span>(<span style="color:#e6db74">&#39;0&#39;</span>)
+    }, <span style="color:#ae81ff">1000</span>)
+}).<span style="color:#a6e22e">then</span>((<span style="color:#a6e22e">data</span>)=&gt;{
+    <span style="color:#75715e">// 第一次处理数据
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">data</span> <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#39;1&#39;</span>
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">data</span>)
+    <span style="color:#75715e">// 【提供了一个API，简介写写法】
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> Promise.<span style="color:#a6e22e">resolve</span>(<span style="color:#a6e22e">data</span>)
+}).<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">data</span>=&gt;{
+    <span style="color:#75715e">// 第二次处理数据
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">data</span> <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#39;2&#39;</span>
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">data</span>)
+    <span style="color:#75715e">// 【提供了一个API，简介写写法】
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> Promise.<span style="color:#a6e22e">resolve</span>(<span style="color:#a6e22e">data</span>)
+}).<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">data</span>=&gt;{
+    <span style="color:#75715e">// 第三次处理数据
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">data</span> <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#39;3&#39;</span>
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">data</span>);
+    <span style="color:#75715e">// 处理完成
+</span><span style="color:#75715e"></span>})
+
+
+
+<span style="color:#75715e">// 也是一步一步处理，但是每一步处理中没有异步操作【第三种写法】
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">new</span> Promise((<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span>)=&gt;{
+    <span style="color:#a6e22e">setTimeout</span>(()=&gt;{
+        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;获得结果:0&#39;</span>);
+        <span style="color:#a6e22e">resolve</span>(<span style="color:#e6db74">&#39;0&#39;</span>)
+    }, <span style="color:#ae81ff">1000</span>)
+}).<span style="color:#a6e22e">then</span>((<span style="color:#a6e22e">data</span>)=&gt;{
+    <span style="color:#75715e">// 第一次处理数据
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">data</span> <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#39;1&#39;</span>
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">data</span>)
+    <span style="color:#75715e">// 【内部会进行promise封装，内部会调用resolve】
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">data</span>
+}).<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">data</span>=&gt;{
+    <span style="color:#75715e">// 第二次处理数据
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">data</span> <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#39;2&#39;</span>
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">data</span>)
+    <span style="color:#75715e">// 【内部会进行promise封装，内部会调用resolve】
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">data</span>
+}).<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">data</span>=&gt;{
+    <span style="color:#75715e">// 第三次处理数据
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">data</span> <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#39;3&#39;</span>
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">data</span>);
+    <span style="color:#75715e">// 处理完成
+</span><span style="color:#75715e"></span>})
+
+
+<span style="color:#75715e">// reject的简写可以是 Promise.reject(err),也是没有异步操作的时候
+</span><span style="color:#75715e">// 另一种写法：throw &#39;异常信息&#39;。catch会捕捉异常
+</span></code></pre></div>
+        </p>
     </div>
+    
+
+    
+
+    <div class="page-footer">
         
-        <div class="paginator">
+        <hr class="footer-divider">
         
+            <a class="tag" href="/tags/javascript">#JavaScript</a>
         
-        <p>Page 2 of 4</p>
-        <div class="paginator-group">
-            
-            <a class="color-link" href="/">
-                    <svg width="13px" height="9px" viewBox="0 0 13 9" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink">
-                        <g class="color-arrow" fill="#63BDA2" fill-rule="nonzero">
-                            <polygon id="Path" points="1.75929935 4.50000282 5.3292523 7.62371165 4.6707477 8.37628835 0.240700645 4.49999718 4.67081049 0.623709205 5.32930951 1.37629079"></polygon>
-                            <polygon id="Path" points="13 4 13 5 1 5 1 4"></polygon>
-                        </g>
-                </svg>
-                Newer
-            </a>
-            
-            
-                <a class="color-link older" href="/page/3/">
-                    Older
-                    <svg width="13px" height="9px" viewBox="0 0 13 9" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink">
-                            <g class="color-arrow" fill="#63BDA2" fill-rule="nonzero">
-                                <polygon points="7.6707477 1.37628835 8.3292523 0.623711653 12.7592994 4.50000282 8.32918951 8.37629079 7.67069049 7.62370921 11.2407006 4.49999718"></polygon>
-                                <polygon id="Path" points="0 5 0 4 12 4 12 5"></polygon>
-                            </g>
-                    </svg>
-                        
-                </a>
-            
-        </div>
-        
+      
     </div>
+
 
         
 
